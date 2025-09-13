@@ -1,0 +1,9 @@
+{"level":"info","message":"Incoming GET /","service":"polling-api","timestamp":"2025-09-14 00:37:27"}
+{"connection":"Keep-Alive","host":"localhost:3000","level":"debug","message":"Request headers:","service":"polling-api","timestamp":"2025-09-14 00:37:27","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584"}
+{"level":"debug","message":"Request body:","service":"polling-api","timestamp":"2025-09-14 00:37:27"}
+{"ip":"::1","level":"info","message":"GET /","query":{},"service":"polling-api","timestamp":"2025-09-14 00:37:27"}
+{"level":"info","message":"Incoming GET /","service":"polling-api","timestamp":"2025-09-14 00:44:28"}
+{"connection":"Keep-Alive","host":"localhost:3000","level":"debug","message":"Request headers:","service":"polling-api","timestamp":"2025-09-14 00:44:28","user-agent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.6584"}
+{"level":"debug","message":"Request body:","service":"polling-api","timestamp":"2025-09-14 00:44:28"}
+{"ip":"::1","level":"info","message":"GET /","query":{},"service":"polling-api","timestamp":"2025-09-14 00:44:28"}
+{"level":"error","message":"UNCAUGHT EXCEPTION! Shutting down...","service":"polling-api","timestamp":"2025-09-14 01:04:13"}

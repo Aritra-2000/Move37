@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\KIIT\\Desktop\\web_devlopment\\Move37\\logs\\.0d528e7f71e3a6342ec21209ee2ce12fb385c9e3-audit.json",
+    "files": [
+        {
+            "date": 1757752684326,
+            "name": "C:\\Users\\KIIT\\Desktop\\web_devlopment\\Move37\\logs\\error-2025-09-13.log",
+            "hash": "219e56747704c11f568352eced8858c67c20dccc50be9f4cd4adc9271028f44f"
+        },
+        {
+            "date": 1757789116882,
+            "name": "C:\\Users\\KIIT\\Desktop\\web_devlopment\\Move37\\logs\\error-2025-09-14.log",
+            "hash": "a0e83a3279f0465206dd9b63161b3c0d89e84cb653da335911392be4cb6a01d1"
+        }
+    ],
+    "hashType": "sha256"
+}

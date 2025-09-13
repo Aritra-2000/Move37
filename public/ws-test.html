@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>WebSocket Test</h1>
+    <div id="status">Connecting to WebSocket server...</div>
+    <div id="messages"></div>
+
+    <script>
+        const token = 'YOUR_JWT_TOKEN'; // Replace with your actual token
+        
+        // Connect to WebSocket server
+        const socket = io('http://localhost:3000', {
+            path: '/socket.io',
+            auth: { token },
+            transports: ['websocket', 'polling']
+        });
+
+        // Connection established
+        socket.on('connect', () => {
+            logMessage('Connected to WebSocket server');
+            logMessage(`Socket ID: ${socket.id}`);
+            
+            // Join a poll room (optional)
+            socket.emit('join_poll', { pollId: 1 });
+        });
+
+        // Handle incoming messages
+        socket.on('poll_updated', (data) => {
+            logMessage('Poll updated:', JSON.stringify(data, null, 2));
+        });
+
+        // Handle errors
+        socket.on('connect_error', (err) => {
+            logMessage(`Connection error: ${err.message}`);
+            console.error('Connection error:', err);
+        });
+
+        // Helper function to log messages to the page
+        function logMessage(message) {
+            const messagesDiv = document.getElementById('messages');
+            const messageElement = document.createElement('div');
+            messageElement.textContent = `[${new Date().toISOString()}] ${message}`;
+            messagesDiv.prepend(messageElement);
+        }
+
+        // Update status
+        document.getElementById('status').textContent = 'Ready';
+    </script>
+</body>
+</html>
